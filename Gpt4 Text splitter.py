@@ -33,6 +33,12 @@ def process_file(file_path, output_dir):
             out.write(paragraph)
 
 if __name__ == "__main__":
-    input_file_path = '/Users/jonasb./Downloads/text.txt'
-    output_directory = '/Users/jonasb./Downloads/Cowabunga Localizations v10.2.0'
+    
+    input_file_path = input("Enter the file path of the .txt file that contains your long text. \n")
+    if os.name == 'nt': 
+        os.system('cls')
+    elif os.name == 'posix': 
+        os.system('clear')
+    output_directory = input("Enter a output directory for the splitted text.\n")
     process_file(input_file_path, output_directory)
+    print("Check your output directory. Everyting should be there now. :)")
